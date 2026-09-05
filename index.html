@@ -1,54 +1,715 @@
 <!DOCTYPE html>
+
 <html lang="ja">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pâtisserie Lumière | 甘いひとときが、日常をやさしく照らす。</title>
-<meta name="description" content="季節のフルーツと丁寧な手仕事で仕立てる、架空の洋菓子店 Pâtisserie Lumière のポートフォリオサイトです。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+
+<title>Pâtisserie Lumière | パティスリー・ルミエール</title>
+
 <style>
-:root{--ivory:#fffaf4;--cream:#f5eadb;--ink:#47382f;--gold:#b88a44;--deep:#6c4a35;--white:#fff;--shadow:0 18px 48px rgba(83,58,40,.14)}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Noto Serif JP',serif;color:var(--ink);background:var(--ivory);line-height:1.8;overflow-x:hidden}img{display:block;width:100%}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,90%);margin:auto}.serif{font-family:'Cormorant Garamond',serif}.eyebrow{letter-spacing:.18em;color:var(--gold);font-size:.82rem;text-transform:uppercase}.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4.5rem);line-height:1;color:var(--deep);font-weight:600}.jp-title{margin-top:.55rem;font-size:.92rem;letter-spacing:.18em;color:#8c7664}.btn{display:inline-flex;align-items:center;gap:.8rem;padding:.9rem 1.5rem;border-radius:999px;border:1px solid rgba(184,138,68,.65);transition:.25s;background:var(--gold);color:#fff;box-shadow:0 8px 24px rgba(184,138,68,.25)}.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}.btn.ghost{background:transparent;color:var(--deep);box-shadow:none}
-header{position:fixed;top:0;left:0;width:100%;z-index:30;background:rgba(255,250,244,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,138,68,.12)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{display:flex;flex-direction:column;line-height:1}.brand strong{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);font-weight:600}.brand small{font-size:.62rem;letter-spacing:.18em;margin-top:.25rem}.links{display:flex;align-items:center;gap:1.5rem;font-size:.84rem}.menu-btn{display:none;border:0;background:none;font-size:1.5rem;color:var(--deep)}
-.hero{min-height:100vh;padding-top:78px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;position:relative;background:radial-gradient(circle at 20% 20%,#fff 0 16%,transparent 42%),linear-gradient(135deg,#fffaf4,#f7eadf)}.hero-copy{padding-left:max(5vw,24px);padding-right:5vw;z-index:2}.hero h1{font-size:clamp(2.5rem,5.2vw,5.2rem);line-height:1.3;font-weight:500;letter-spacing:.04em;margin:1rem 0}.hero p{max-width:560px;font-size:1rem}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}.hero-visual{height:calc(100vh - 78px);min-height:650px;position:relative;overflow:hidden}.hero-visual img{height:100%;object-fit:cover}.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,250,244,.42),transparent 35%)}.badge{position:absolute;right:7%;bottom:7%;z-index:2;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);padding:1.1rem 1.3rem;border-radius:16px;border:1px solid rgba(184,138,68,.25);box-shadow:var(--shadow);font-size:.82rem}.badge strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold)}
-section{padding:110px 0}.intro{text-align:center}.intro p{max-width:760px;margin:1.5rem auto 0}.divider{width:76px;height:1px;background:var(--gold);margin:1.4rem auto}
-.products{background:#fff}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:3rem}.card{background:var(--ivory);border-radius:22px;overflow:hidden;box-shadow:0 10px 34px rgba(70,50,36,.08);transition:.3s}.card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}.card img{aspect-ratio:1/1;object-fit:cover}.card-body{padding:1.25rem}.card h3{font-size:1rem;margin-bottom:.45rem}.card p{font-size:.82rem;color:#78665a}.price{display:flex;justify-content:space-between;align-items:center;margin-top:.8rem;color:var(--gold);font-weight:600}
-.story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.story-image{position:relative}.story-image img{border-radius:220px 220px 28px 28px;box-shadow:var(--shadow);aspect-ratio:4/5;object-fit:cover}.story-image:before{content:"Lumière";position:absolute;font-family:'Cormorant Garamond',serif;font-size:7rem;color:rgba(184,138,68,.12);left:-35px;bottom:-40px;z-index:-1}.story-copy h2{margin:1rem 0 1.5rem}.story-copy p+p{margin-top:1rem}
-.season{background:linear-gradient(180deg,#f9eee6,#fffaf4)}.season-box{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:#fff;border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}.season-box img{height:100%;min-height:470px;object-fit:cover}.season-copy{padding:clamp(2rem,5vw,4.5rem);display:flex;flex-direction:column;justify-content:center}.season-copy h2{margin:.8rem 0 1.4rem}.season-copy .tag{display:inline-block;width:max-content;background:#f6e3df;color:#9a6159;padding:.35rem .8rem;border-radius:999px;font-size:.75rem;margin-bottom:1rem}
-.gift{background:#fff}.gift-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.gift-copy h2{margin:.8rem 0 1.5rem}.gift-img img{border-radius:28px;box-shadow:var(--shadow);aspect-ratio:5/4;object-fit:cover}
-.testimonials .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:3rem}.quote{background:#fff;padding:2rem;border-radius:20px;border:1px solid rgba(184,138,68,.18)}.stars{color:var(--gold);letter-spacing:.12em;margin-bottom:.8rem}.quote p{font-size:.9rem}.quote small{display:block;margin-top:1rem;color:#8a7768}
-.shop{background:#5b4435;color:#fff}.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.shop img{border-radius:28px;aspect-ratio:4/3;object-fit:cover}.shop .section-title,.shop .jp-title{color:#fff}.shop dl{display:grid;grid-template-columns:110px 1fr;gap:.7rem 1rem;margin:1.8rem 0}.shop dt{color:#dbc19b}.map{margin-top:1.2rem;padding:1.1rem;border:1px solid rgba(255,255,255,.2);border-radius:16px;background:rgba(255,255,255,.04)}
-.cta{text-align:center;background:linear-gradient(135deg,#fbf0e9,#fffaf4)}.cta h2{margin-bottom:1rem}.cta p{margin-bottom:1.8rem}.cta-actions{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
-footer{padding:50px 0;background:#2f241f;color:#d9cbc2}.footer-grid{display:flex;justify-content:space-between;gap:2rem;align-items:end}.footer-brand strong{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:#e0bd7d}.footer-nav{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.8rem}.copyright{font-size:.72rem;margin-top:1.5rem;color:#9f8f84}
-.reveal{opacity:0;transform:translateY(24px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
-@media(max-width:900px){.links{display:none}.menu-btn{display:block}.hero{grid-template-columns:1fr}.hero-copy{padding:80px 7vw 50px}.hero-visual{height:58vh;min-height:420px}.grid{grid-template-columns:repeat(2,1fr)}.story,.season-box,.gift-grid,.shop-grid{grid-template-columns:1fr}.story{gap:45px}.gift-grid{gap:35px}.quotes{grid-template-columns:1fr!important}.season-box img{min-height:380px}.footer-grid{align-items:flex-start;flex-direction:column}}
-@media(max-width:560px){section{padding:80px 0}.nav{height:68px}.brand strong{font-size:1.7rem}.hero{padding-top:68px}.hero-copy{padding-top:55px}.hero h1{font-size:2.55rem}.hero-visual{height:48vh;min-height:350px}.badge{right:4%;bottom:4%;font-size:.72rem}.grid{grid-template-columns:1fr}.card img{aspect-ratio:4/3}.story-image:before{font-size:4.8rem}.shop dl{grid-template-columns:90px 1fr}.footer-nav{display:grid;grid-template-columns:1fr 1fr}}
+
+*{
+
+  box-sizing:border-box;
+
+  margin:0;
+
+  padding:0;
+
+}
+
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+body{
+
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+
+  color:#4b4038;
+
+  background:#fffaf5;
+
+  line-height:1.8;
+
+}
+
+header{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:100;
+
+  background:rgba(255,255,255,.95);
+
+  padding:14px 6%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  box-shadow:0 2px 15px rgba(0,0,0,.05);
+
+}
+
+.logo{
+
+  font-size:20px;
+
+  letter-spacing:2px;
+
+  color:#9a7040;
+
+}
+
+nav a{
+
+  color:#5a4a40;
+
+  text-decoration:none;
+
+  margin-left:18px;
+
+  font-size:13px;
+
+}
+
+.hero{
+
+  min-height:78vh;
+
+  background:
+
+    linear-gradient(rgba(255,248,240,.25),rgba(255,248,240,.25)),
+
+    url("hero.jpg") center/cover no-repeat;
+
+  display:flex;
+
+  align-items:center;
+
+  padding:8%;
+
+}
+
+.hero-box{
+
+  background:rgba(255,255,255,.86);
+
+  padding:40px;
+
+  max-width:520px;
+
+  border-radius:4px;
+
+}
+
+.hero h1{
+
+  font-size:clamp(30px,6vw,55px);
+
+  font-weight:400;
+
+  color:#8c653b;
+
+  margin-bottom:15px;
+
+}
+
+.hero p{
+
+  font-size:16px;
+
+  margin-bottom:25px;
+
+}
+
+.button{
+
+  display:inline-block;
+
+  background:#a77a45;
+
+  color:white;
+
+  text-decoration:none;
+
+  padding:12px 28px;
+
+  border-radius:30px;
+
+}
+
+section{
+
+  padding:80px 7%;
+
+}
+
+.title{
+
+  text-align:center;
+
+  margin-bottom:45px;
+
+}
+
+.title small{
+
+  color:#b18a5a;
+
+  letter-spacing:3px;
+
+}
+
+.title h2{
+
+  font-size:30px;
+
+  font-weight:400;
+
+  margin-top:5px;
+
+}
+
+.intro{
+
+  text-align:center;
+
+  max-width:750px;
+
+  margin:auto;
+
+}
+
+.products{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:25px;
+
+}
+
+.card{
+
+  background:white;
+
+  box-shadow:0 8px 25px rgba(70,40,20,.08);
+
+  overflow:hidden;
+
+}
+
+.card img{
+
+  width:100%;
+
+  height:280px;
+
+  object-fit:cover;
+
+}
+
+.card-text{
+
+  padding:22px;
+
+}
+
+.card h3{
+
+  font-weight:400;
+
+  color:#8c653b;
+
+}
+
+.price{
+
+  color:#a77a45;
+
+  margin-top:8px;
+
+}
+
+.season{
+
+  background:#f5ede5;
+
+}
+
+.gift{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  align-items:center;
+
+  gap:50px;
+
+}
+
+.gift img{
+
+  width:100%;
+
+  height:430px;
+
+  object-fit:cover;
+
+}
+
+.shop{
+
+  background:white;
+
+}
+
+.shop-wrap{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:45px;
+
+  align-items:center;
+
+}
+
+.shop-wrap img{
+
+  width:100%;
+
+  height:430px;
+
+  object-fit:cover;
+
+}
+
+.info{
+
+  background:#fff;
+
+  padding:35px;
+
+}
+
+.info h3{
+
+  font-size:26px;
+
+  font-weight:400;
+
+  color:#8c653b;
+
+  margin-bottom:20px;
+
+}
+
+.cta{
+
+  text-align:center;
+
+  background:#8c653b;
+
+  color:white;
+
+}
+
+.cta h2{
+
+  font-size:30px;
+
+  font-weight:400;
+
+  margin-bottom:15px;
+
+}
+
+.cta .button{
+
+  background:white;
+
+  color:#8c653b;
+
+  margin-top:20px;
+
+}
+
+footer{
+
+  text-align:center;
+
+  padding:35px;
+
+  background:#3f342d;
+
+  color:#ddd;
+
+  font-size:12px;
+
+}
+
+.portfolio{
+
+  margin-top:12px;
+
+  opacity:.7;
+
+}
+
+@media(max-width:750px){
+
+  header{
+
+    display:block;
+
+    text-align:center;
+
+  }
+
+  nav{
+
+    margin-top:8px;
+
+  }
+
+  nav a{
+
+    margin:0 5px;
+
+    font-size:11px;
+
+  }
+
+  .hero{
+
+    min-height:70vh;
+
+    padding:25px;
+
+  }
+
+  .hero-box{
+
+    padding:28px 22px;
+
+  }
+
+  section{
+
+    padding:60px 20px;
+
+  }
+
+  .products,
+
+  .gift,
+
+  .shop-wrap{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .card img,
+
+  .gift img,
+
+  .shop-wrap img{
+
+    height:auto;
+
+  }
+
+}
+
 </style>
+
 </head>
+
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top"><strong>Pâtisserie Lumière</strong><small>パティスリー・ルミエール</small></a><nav class="links"><a href="#concept">コンセプト</a><a href="#products">商品紹介</a><a href="#gift">ギフト</a><a href="#shop">店舗情報</a><a href="#reserve" class="btn">ご予約はこちら</a></nav><button class="menu-btn" aria-label="メニュー">☰</button></div></header>
-<main id="top">
-<section class="hero"><div class="hero-copy reveal"><div class="eyebrow">Fine sweets for everyday moments</div><h1>甘いひとときが、<br>日常をやさしく照らす。</h1><p>季節のフルーツ、厳選した素材、そして一つひとつの丁寧な手仕事。特別な日にも、何気ない午後にも寄り添う洋菓子をお届けします。</p><div class="hero-actions"><a class="btn" href="#products">季節のお菓子を見る →</a><a class="btn ghost" href="#concept">私たちの想い</a></div></div><div class="hero-visual"><img src="assets/hero.jpg" alt="苺のデコレーションケーキ"><div class="badge">季節のおすすめ<strong>Strawberry Collection</strong>旬の苺を贅沢に。</div></div></section>
-<section class="intro" id="concept"><div class="wrap reveal"><div class="eyebrow">Our Philosophy</div><h2 class="section-title">A Little Light, Every Day.</h2><div class="jp-title">日々に、小さな灯りを。</div><div class="divider"></div><p>ルミエールが大切にしているのは、華やかさだけではありません。素材の香り、口どけ、余韻までを丁寧に重ね、食べた瞬間に気持ちが少しほどけるような一皿を目指しています。</p></div></section>
-<section class="products" id="products"><div class="wrap"><div class="reveal"><div class="eyebrow">Seasonal Sweets</div><h2 class="section-title">Our Favorites</h2><div class="jp-title">人気の洋菓子</div></div><div class="grid">
-<article class="card reveal"><img src="assets/shortcake.jpg" alt="苺のショートケーキ"><div class="card-body"><h3>苺のショートケーキ</h3><p>ふわふわのスポンジ、軽やかな生クリーム、みずみずしい苺。</p><div class="price"><span>¥680</span><span>→</span></div></div></article>
-<article class="card reveal"><img src="assets/chocolate.jpg" alt="ショコラケーキ"><div class="card-body"><h3>ショコラノワール</h3><p>カカオの奥深い香りとナッツの食感を重ねた大人の味わい。</p><div class="price"><span>¥720</span><span>→</span></div></div></article>
-<article class="card reveal"><img src="assets/tart.jpg" alt="季節のフルーツタルト"><div class="card-body"><h3>季節のフルーツタルト</h3><p>旬の果実を主役に、香ばしいタルト生地とやさしいクリーム。</p><div class="price"><span>¥760</span><span>→</span></div></div></article>
-<article class="card reveal"><img src="assets/gift.jpg" alt="焼き菓子ギフト"><div class="card-body"><h3>焼き菓子ギフト</h3><p>フィナンシェやマドレーヌを詰め合わせた贈りもの。</p><div class="price"><span>¥2,400〜</span><span>→</span></div></div></article>
-</div></div></section>
-<section><div class="wrap story"><div class="story-image reveal"><img src="assets/shortcake.jpg" alt="丁寧に仕立てたケーキ"></div><div class="story-copy reveal"><div class="eyebrow">Craftsmanship</div><h2 class="section-title">Made With Care.</h2><div class="jp-title">ひとつずつ、丁寧に。</div><p>見た目の美しさだけでなく、甘さ・香り・食感のバランスを大切にしています。毎朝、その日の素材と向き合いながら、店内の工房で一つずつ仕立てています。</p><p>大切な人への贈りものにも、自分への小さなご褒美にも。記憶に残るひと口を目指しています。</p></div></div></section>
-<section class="season"><div class="wrap season-box reveal"><img src="assets/tart.jpg" alt="季節限定の苺タルト"><div class="season-copy"><span class="tag">SEASON LIMITED</span><div class="eyebrow">Spring Collection</div><h2 class="section-title">Strawberry<br>Garden</h2><div class="jp-title">季節限定 苺のガーデンタルト</div><p>春の光を閉じ込めたような、華やかな苺のタルト。香ばしいピスタチオと甘酸っぱい苺を合わせました。</p><div style="margin-top:1.8rem"><a href="#reserve" class="btn">ホールケーキを予約 →</a></div></div></div></section>
-<section class="gift" id="gift"><div class="wrap gift-grid"><div class="gift-copy reveal"><div class="eyebrow">Gift Collection</div><h2 class="section-title">Sweet Gifts.</h2><div class="jp-title">想いを包む、焼き菓子。</div><p>大切な人へ、ありがとうの気持ちを。発酵バターの香り豊かなフィナンシェや、しっとり焼き上げたマドレーヌを上品な箱に詰め合わせます。</p><div style="margin-top:1.8rem"><a href="#reserve" class="btn ghost">ギフトについて相談する →</a></div></div><div class="gift-img reveal"><img src="assets/gift.jpg" alt="焼き菓子の詰め合わせ"></div></div></section>
-<section class="testimonials"><div class="wrap"><div class="reveal"><div class="eyebrow">Voices</div><h2 class="section-title">Sweet Memories</h2><div class="jp-title">お客様の声</div></div><div class="quotes"><div class="quote reveal"><div class="stars">★★★★★</div><p>甘すぎず、苺の香りがしっかり感じられました。家族の誕生日にまたお願いしたいです。</p><small>30代 / 女性</small></div><div class="quote reveal"><div class="stars">★★★★★</div><p>箱を開けた瞬間からきれいで、贈りものにも安心して選べるお店だと思いました。</p><small>40代 / 女性</small></div><div class="quote reveal"><div class="stars">★★★★★</div><p>ショコラが濃厚なのに重くなくて驚きました。コーヒーとの相性もとても良かったです。</p><small>30代 / 男性</small></div></div></div></section>
-<section class="shop" id="shop"><div class="wrap shop-grid"><div class="reveal"><img src="assets/shop.jpg" alt="明るく上品な洋菓子店内"></div><div class="reveal"><div class="eyebrow">Shop Information</div><h2 class="section-title">Visit Lumière</h2><div class="jp-title">店舗情報</div><dl><dt>営業時間</dt><dd>10:00 – 19:00</dd><dt>定休日</dt><dd>毎週火曜日</dd><dt>住所</dt><dd>東京都〇〇区〇〇 1-2-3</dd><dt>電話</dt><dd>00-0000-0000</dd></dl><div class="map">※このサイトはポートフォリオ用の架空店舗です。住所・電話番号・価格等もすべてサンプルです。</div></div></div></section>
-<section class="cta" id="reserve"><div class="wrap reveal"><div class="eyebrow">Reservation</div><h2 class="section-title">Make Your Day Sweeter.</h2><div class="jp-title">特別な一日を、もっと甘く。</div><p>誕生日・記念日のホールケーキやギフトのご予約を承ります。</p><div class="cta-actions"><a href="javascript:void(0)" class="btn" onclick="alert('ポートフォリオ用デモサイトのため、予約機能は現在停止しています。')">ケーキを予約する →</a><a href="javascript:void(0)" class="btn ghost" onclick="alert('デモサイトのため、Instagramリンクは未設定です。')">Instagramを見る</a></div></div></section>
-</main>
-<footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><strong>Pâtisserie Lumière</strong><div>甘いひとときが、日常をやさしく照らす。</div></div><div class="footer-nav"><a href="#concept">Concept</a><a href="#products">Sweets</a><a href="#gift">Gift</a><a href="#shop">Shop</a></div></div><div class="copyright">© 2026 Pâtisserie Lumière — Portfolio Demo Website</div></div></footer>
-<script>
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-document.querySelector('.menu-btn').addEventListener('click',()=>alert('スマホ用メニューのデモです。ページ内リンクは下へスクロールしてご覧ください。'));
-</script>
+
+<header>
+
+  <div class="logo">Pâtisserie Lumière</div>
+
+  <nav>
+
+    <a href="#concept">CONCEPT</a>
+
+    <a href="#sweets">SWEETS</a>
+
+    <a href="#gift">GIFT</a>
+
+    <a href="#shop">SHOP</a>
+
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <div class="hero-box">
+
+    <p>毎日に、小さな幸福を。</p>
+
+    <h1>Pâtisserie<br>Lumière</h1>
+
+    <p>
+
+      季節の果実と上質な素材から生まれる、<br>
+
+      心までほどけるような洋菓子を。
+
+    </p>
+
+    <a class="button" href="#sweets">お菓子を見る</a>
+
+  </div>
+
+</section>
+
+<section id="concept">
+
+  <div class="title">
+
+    <small>OUR STORY</small>
+
+    <h2>ひとつひとつ、丁寧に。</h2>
+
+  </div>
+
+  <div class="intro">
+
+    <p>
+
+      パティスリー・ルミエールは、
+
+      「大切な人との時間を少しだけ特別にする」
+
+      そんなお菓子を目指す小さな洋菓子店です。
+
+    </p>
+
+    <br>
+
+    <p>
+
+      素材の香り、口どけ、甘さの余韻。
+
+      一つひとつのバランスを大切にしながら、
+
+      毎日店内で丁寧に仕上げています。
+
+    </p>
+
+  </div>
+
+</section>
+
+<section id="sweets" class="season">
+
+  <div class="title">
+
+    <small>SEASONAL SWEETS</small>
+
+    <h2>季節のおすすめ</h2>
+
+  </div>
+
+  <div class="products">
+
+    <div class="card">
+
+      <img src="shortcake.jpg" alt="苺のショートケーキ">
+
+      <div class="card-text">
+
+        <h3>苺のショートケーキ</h3>
+
+        <p>軽やかな生クリームと、甘酸っぱい苺を重ねました。</p>
+
+        <div class="price">¥680</div>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="chocolate.jpg" alt="ショコラケーキ">
+
+      <div class="card-text">
+
+        <h3>ショコラ・ノワール</h3>
+
+        <p>濃厚なカカオの香りと、なめらかな口どけ。</p>
+
+        <div class="price">¥720</div>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="tart.jpg" alt="季節のフルーツタルト">
+
+      <div class="card-text">
+
+        <h3>季節のフルーツタルト</h3>
+
+        <p>旬の果実を贅沢に飾った華やかなタルトです。</p>
+
+        <div class="price">¥750</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="gift">
+
+  <div class="gift">
+
+    <img src="gift.jpg" alt="焼き菓子ギフト">
+
+    <div>
+
+      <div class="title" style="text-align:left;margin-bottom:25px">
+
+        <small>GIFT COLLECTION</small>
+
+        <h2>想いを届ける贈りもの</h2>
+
+      </div>
+
+      <p>
+
+        フィナンシェ、マドレーヌ、クッキーなど、
+
+        素材の風味を大切に焼き上げたお菓子を
+
+        ギフトボックスに詰め合わせました。
+
+      </p>
+
+      <br>
+
+      <p>
+
+        誕生日や記念日、大切な方への贈りものにも
+
+        おすすめです。
+
+      </p>
+
+      <br>
+
+      <a class="button" href="#shop">店舗を見る</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="shop" class="shop">
+
+  <div class="title">
+
+    <small>OUR SHOP</small>
+
+    <h2>店舗のご案内</h2>
+
+  </div>
+
+  <div class="shop-wrap">
+
+    <img src="shop.jpg" alt="パティスリー店内">
+
+    <div class="info">
+
+      <h3>Pâtisserie Lumière</h3>
+
+      <p>
+
+        焼きたてのお菓子と季節のケーキを揃えて、
+
+        皆さまをお待ちしております。
+
+      </p>
+
+      <br>
+
+      <p><strong>営業時間</strong><br>
+
+      10:00 – 19:00</p>
+
+      <br>
+
+      <p><strong>定休日</strong><br>
+
+      火曜日</p>
+
+      <br>
+
+      <p>
+
+        ※この店舗情報はポートフォリオ用の架空設定です。
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>特別な日に、特別なケーキを。</h2>
+
+  <p>
+
+    バースデーケーキや記念日のホールケーキも承ります。
+
+  </p>
+
+  <a class="button" href="#shop">ご予約・お問い合わせ</a>
+
+</section>
+
+<footer>
+
+  <p>© Pâtisserie Lumière</p>
+
+  <p class="portfolio">
+
+    Web Design Portfolio / 架空店舗の自主制作サイトです
+
+  </p>
+
+</footer>
+
 </body>
+
 </html>
