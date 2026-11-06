@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-demo-form]').forEach(form=>{form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const result=form.querySelector('[role=status]');const choice=form.querySelector('select').value;result.textContent='選択した内容：'+choice+'\nこのフォームは操作用のデモです。お問い合わせ・予約は送信されていません。';result.tabIndex=-1;result.focus();});});
